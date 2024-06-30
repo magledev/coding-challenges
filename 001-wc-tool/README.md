@@ -51,19 +51,19 @@ DESCRIPTION
 ## Steps:
 
 ### Step One:
-In this step your goal is to write a simple version of wc, let’s call it ccwc (cc for Coding Challenges) that takes the command line option -c and outputs the number of bytes in a file.
+- [ ] In this step your goal is to write a simple version of wc, let’s call it ccwc (cc for Coding Challenges) that takes the command line option -c and outputs the number of bytes in a file.
 
 ### Step Two:
-In this step your goal is to support the command line option -l that outputs the number of lines in a file.
+- [ ] In this step your goal is to support the command line option -l that outputs the number of lines in a file.
 
 ### Step Three:
-In this step your goal is to support the command line option -w that outputs the number of words in a file.
+- [ ] In this step your goal is to support the command line option -w that outputs the number of words in a file.
 
 ### Step Four:
-In this step your goal is to support the command line option -m that outputs the number of characters in a file. If the current locale does not support multibyte characters this will match the -c option.
+- [ ] In this step your goal is to support the command line option -m that outputs the number of characters in a file. If the current locale does not support multibyte characters this will match the -c option.
 
 ### Step Five:
-In this step your goal is to support the default option - i.e. no options are provided, which is the equivalent to the -c, -l and -w options.
+- [ ] In this step your goal is to support the default option - i.e. no options are provided, which is the equivalent to the -c, -l and -w options.
 
 ### Step Six:
-In this step your goal is to support being able to read from standard input if no filename is specified.
+- [ ] In this step your goal is to support being able to read from standard input if no filename is specified.
