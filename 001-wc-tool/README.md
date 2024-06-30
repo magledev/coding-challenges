@@ -51,7 +51,7 @@ DESCRIPTION
 ## Steps:
 
 ### Step One:
-- [ ] In this step your goal is to write a simple version of wc, let’s call it ccwc (cc for Coding Challenges) that takes the command line option -c and outputs the number of bytes in a file.
+- [x] In this step your goal is to write a simple version of wc, let’s call it ccwc (cc for Coding Challenges) that takes the command line option -c and outputs the number of bytes in a file.
 
 ### Step Two:
 - [ ] In this step your goal is to support the command line option -l that outputs the number of lines in a file.
