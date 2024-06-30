@@ -23,7 +23,8 @@ def get_file_size(file_path, cmd_option):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print(f"Usage: ccwc.py <option> <file_path>")
+        print(f"Usage: ccwc.py [OPTION]... [FILE]...")
+        print(f"Options:\n-c\tprint the byte counts")
     else:
         cmd_option = sys.argv[1]
         file_path = sys.argv[2]
