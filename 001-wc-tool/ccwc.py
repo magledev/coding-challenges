@@ -16,7 +16,7 @@ def get_file_size(file_path, cmd_option):
     except FileNotFoundError:
         return f"File not found:"
     except PermissionError:
-        return f"Permission denied: {file_path}"
+        return f"Permission denied:"
     except Exception as e:
         return f"An error has occured: {e}"
 
