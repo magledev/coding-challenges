@@ -2,17 +2,24 @@ import sys
 import os
 
 
-def get_file_size(file_path, cmd_option):
+def wc(file_path, cmd_option):
     try:
-        if cmd_option == "-c":
-            with open(file_path, "rb") as f:
-                # Begin at start of file, up until the end i.e. an empty byte
-                f.seek(0, 2)
-                # Get the current postion, which represents the size
-                size = f.tell()
-            return size
-        else:
-            print(f"'{cmd_option}' is not a valid option")
+        with open(file_path, "rb") as f:
+            match cmd_option:
+                case "-c":
+                    # Begin at start of file, up until the end i.e. an empty byte
+                    f.seek(0, 2)
+                    # Get the current postion in bytes, which represents the file size
+                    file_bytes = f.tell()
+                    return file_bytes
+                case "-l":
+                    file_lines = 0
+                    # Loop through the file and count the number of lines
+                    for _ in f:
+                        file_lines += 1
+                    return file_lines
+                case _:
+                    print(f"'{cmd_option}' is not a valid option")
     except FileNotFoundError:
         return f"File not found:"
     except PermissionError:
@@ -29,6 +36,6 @@ if __name__ == "__main__":
         cmd_option = sys.argv[1]
         file_path = sys.argv[2]
         file_name = os.path.basename(file_path)
-        file_size = get_file_size(file_path, cmd_option)
+        file_size = wc(file_path, cmd_option)
         if file_size is not None:
             print(f"{file_size} {file_name}")
