@@ -6,12 +6,14 @@ def wc(file_path, cmd_option):
     try:
         with open(file_path, "rb") as f:
             match cmd_option:
+                # Count bytes
                 case "-c":
                     # Begin at start of file, up until the end i.e. an empty byte
                     f.seek(0, 2)
                     # Get the current postion in bytes, which represents the file size
                     file_bytes = f.tell()
                     return file_bytes
+                # Count lines
                 case "-l":
                     file_lines = 0
                     # Loop through the file and count the number of lines
@@ -30,8 +32,14 @@ def wc(file_path, cmd_option):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print(f"Usage: ccwc.py [OPTION]... [FILE]...")
-        print(f"Options:\n-c\tprint the byte counts")
+        print(
+            (
+                "Usage: ccwc.py [OPTION]... [FILE]..."
+                "\nOptions:"
+                "\n-c\tprint the byte counts"
+                "\n-l\tprint the line counts"
+            )
+        )
     else:
         cmd_option = sys.argv[1]
         file_path = sys.argv[2]
