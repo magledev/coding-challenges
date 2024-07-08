@@ -60,7 +60,7 @@ DESCRIPTION
 - [x] In this step your goal is to support the command line option -w that outputs the number of words in a file.
 
 ### Step Four:
-- [ ] In this step your goal is to support the command line option -m that outputs the number of characters in a file. If the current locale does not support multibyte characters this will match the -c option.
+- [x] In this step your goal is to support the command line option -m that outputs the number of characters in a file. If the current locale does not support multibyte characters this will match the -c option.
 
 ### Step Five:
 - [ ] In this step your goal is to support the default option - i.e. no options are provided, which is the equivalent to the -c, -l and -w options.
