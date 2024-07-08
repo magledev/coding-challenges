@@ -54,10 +54,10 @@ DESCRIPTION
 - [x] In this step your goal is to write a simple version of wc, let’s call it ccwc (cc for Coding Challenges) that takes the command line option -c and outputs the number of bytes in a file.
 
 ### Step Two:
-- [ ] In this step your goal is to support the command line option -l that outputs the number of lines in a file.
+- [x] In this step your goal is to support the command line option -l that outputs the number of lines in a file.
 
 ### Step Three:
-- [ ] In this step your goal is to support the command line option -w that outputs the number of words in a file.
+- [x] In this step your goal is to support the command line option -w that outputs the number of words in a file.
 
 ### Step Four:
 - [ ] In this step your goal is to support the command line option -m that outputs the number of characters in a file. If the current locale does not support multibyte characters this will match the -c option.
