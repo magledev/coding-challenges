@@ -20,6 +20,13 @@ def wc(file_path, cmd_option):
                     for _ in f:
                         file_lines += 1
                     return file_lines
+                case "-w":
+                    file_words = 0
+                    # Loop through the file, decode each line to utf-8, split then count
+                    for line in f:
+                        words = line.decode("utf-8").split()
+                        file_words += len(words)
+                    return file_words
                 case _:
                     print(f"'{cmd_option}' is not a valid option")
     except FileNotFoundError:
@@ -38,6 +45,7 @@ if __name__ == "__main__":
                 "\nOptions:"
                 "\n-c\tprint the byte counts"
                 "\n-l\tprint the line counts"
+                "\n-w\tprint the word counts"
             )
         )
     else:
